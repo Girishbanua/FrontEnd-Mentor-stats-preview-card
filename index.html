@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  
+  <title>Frontend Mentor | Stats preview card component</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap');
+    * {
+      margin: 0%;
+      padding: 0%;
+      box-sizing: border-box;      
+      font-family: 'Inter',sans-serif;
+    }
+    body {
+      background-color: hsl(233, 47%, 7%);
+    }
+    .main-card {      
+      background-color:  hsl(244, 38%, 16%);
+      color: white;
+      display: flex;
+      justify-content: center;      
+      max-width: 80%;
+      margin: 10% auto;      
+      border-radius: 10px;      
+    }
+    .heading {      
+      margin: 5% 5% 0 5%;            
+    }  
+      h1 { font-size: 45px;}
+      h1 span { font-size: 45px; color: hsl(277, 64%, 61%);}
+
+    .description {      
+      margin-right: 15%;      
+    }
+      .description p { margin: 5% auto; color: hsla(0, 0%, 100%, 0.75); line-height: 1.5; font-size: 18px; font-weight: 400; font-family: 'Inter', sans-serif;}
+    
+    .stats-headings {
+      display: flex;      
+      justify-content: space-between;     
+      margin-right: 20%;
+      margin-bottom: 10%;           
+    }
+      .contents { margin-top: 10%;}
+      h3 { font-size: 24px;}
+      .stats-dscrptn {  text-transform: uppercase; font-size: 11px; letter-spacing: 2px; color: hsla(0, 0%, 100%, 0.6); font-weight: 700;}
+    
+    .image {
+      width: 100%;      
+      background: url('./images/image-header-desktop.jpg');
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: cover;
+      border-radius: 0 10px 10px 0;
+    }    
+    .image .overlay {
+      background-color: hsl(277, 80%, 69%);
+      max-width: 100%;
+      height: 100%;
+      border-radius: 0 10px 10px 0;
+      mix-blend-mode: multiply;
+    }
+       
+
+    .attribution { font-size: 11px; text-align: center; color: white; padding: 2%;}
+    .attribution a { color: hsl(277, 64%, 61%); }
+
+    @media screen and (max-width:400px){
+      .main-card {                 
+        flex-direction: column-reverse;
+        max-width: 90%;
+        height: 100%;          
+        padding: 0;   
+        text-align: center;    
+    }
+    .image {      
+      height: 250px;          
+      background: url('./images/image-header-mobile.jpg');
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: cover;
+      border-radius: 10px 10px 0 0;      
+    }
+    
+    .heading h1, .heading span {
+      font-size: 30px;
+    }
+    .description {
+      margin: auto;
+      padding: 0 10%;      
+    }
+    .description p {
+      font-size: 14px;      
+    }
+    .stats-headings {
+      display: block;
+      margin: 10% 0 10% 0;
+    }
+    .stats-headings .contents {
+      line-height: 1.5;
+    }
+    }
+  </style>
+</head>
+<body>
+  <div class="main-card"><!--Main Card with description and image-->
+   
+    <div class="heading"><!--Main Heading div -->
+      <h1>Get <span>insights</span> that help your business grow.</h1>
+    
+      <div class="description">
+      <p>Discover the benefits of data analytics and make better decisions regarding revenue, customer 
+        experience, and overall efficiency.</p>      
+      </div>    
+      
+      
+      <div class="stats-headings">
+        <div class="contents"><h3>10k+</h3><p class="stats-dscrptn"> companies</p></div>
+        <div class="contents"><h3>314 </h3><p class="stats-dscrptn">templates</p></div>
+        <div class="contents"><h3>12M+</h3><p class="stats-dscrptn"> queries</p></div>
+      </div>
+      
+    </div>
+
+    <div class="image"><!--Image div-->
+      <div class="overlay"></div>    
+     </div>
+  
+  </div>
+ 
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="#">Girish Chandra Banua</a>.
+  </div>
+</body>
+</html>
